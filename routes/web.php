@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-Route::get('/', 'PlayersController@index');
-Route::get('/index', 'PlayersController@index');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
